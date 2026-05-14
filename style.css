@@ -2,6 +2,7 @@ body{
     margin: 3%;
     background-color: rgb(10,10,10);
     color: white;
+    font-family: Nunito;
 }
 .warning{
     color: rgb(255,100,100);
