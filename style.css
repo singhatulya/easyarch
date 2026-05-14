@@ -4,6 +4,10 @@ body{
     color: white;
 }
 .warning{
-    color: rgb(250,50,50);
+    color: rgb(255,50,50);
     background-color: rgb(255,140,140);
+    padding :2%;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: red;
 }
