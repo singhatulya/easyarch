@@ -13,4 +13,10 @@ a{
     padding: 10px;
     border-radius: 3px;
     margin: 3%;
+    text-align: center;
+    text-decoration: none;
+    transition: ease 0.4s;
+}
+a :hover{
+    color: rgb(200,240,255);
 }
