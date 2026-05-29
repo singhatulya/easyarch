@@ -17,7 +17,19 @@
             <p>Or</p>
             <code>ping google.com</code>
             <p>If you Recieve Packets then you are good to go!</p>
-            <p>If you are not able to get packets, You should using Wifi.</p>
+            <p>If you are not able to get packets, You should use Wifi.</p>
+        </div>
+        <div class="wifi">
+            <p>Steps for connecting using Wifi.</p>
+            <p><b>Step 1</b> Run:</p>
+            <code>iwctl</code>
+            <p>Type the exact name of your Preferred Device name below.</p>
+            <form>
+                <input type="text" id="devname">
+                <button id="generate">Generate Next Command</button>
+            </form>
+            <p>Then Run this Command to get a list of all Networks.</p>
+            <code id="station">station ?? scan</code>
         </div>
     </body>
 </html>
