@@ -22,4 +22,11 @@ a :hover{
 h1{
     font-size:350%;
     margin: 4%;
+    text-align: center;
+}
+code{
+    font-family: Ubuntu Mono;
+    background-color: rgb(40,40,80);
+    padding: 1%;
+    border-radius: 3px;
 }
