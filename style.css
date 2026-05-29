@@ -12,11 +12,14 @@ a{
     background-color: rgb(30,30,120);
     padding: 10px;
     border-radius: 3px;
-    margin: 3%;
     text-align: center;
     text-decoration: none;
     transition: ease 0.4s;
 }
 a :hover{
     color: rgb(200,240,255);
+}
+h1{
+    font-size:350%;
+    margin: 4%;
 }
