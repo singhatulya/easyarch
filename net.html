@@ -10,7 +10,8 @@
     <body>
         <h1>Connecting to The Internet</h1>
         <p>Connecting to the Internet is very essential for Arch Linux Installation</p>
-        <button id="Ethernet">Ethernet</button> <button id="WiFi">Wifi</button>
+        <button id="Ethernet">Ethernet</button> 
+        <button id="WiFi">Wifi</button>
         <div class="ethernet">
             <p>If you are on Ethernet, Chances are you may already be Connected to the Internet.<br>You check by-</p>
             <code>ping 8.8.8.8</code>
@@ -48,10 +49,6 @@
                     document.getElementsByClassName("ethernet").style.display = "block";
                     document.getElementsByClassName("wifi").style.display = "none";
                         });
-            document.getElementById("WiFi").addEventListener("click", function(){
-                document.getElementsByClassName("wifi").style.display = "block";
-                document.getElementsByClassName("ethernet").style.display = "none";
-            })
         </script>
     </body>
 </html>
