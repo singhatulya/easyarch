@@ -45,10 +45,21 @@
             <a href="part.html">Continue- Partition The Disks</a>
         </div>
         <script>
-            document.getElementById("Ethernet").addEventListener("click", function() {
-                    document.getElementsByClassName("ethernet").style.display = "block";
-                    document.getElementsByClassName("wifi").style.display = "none";
-                        });
-        </script>
+        const ethernetBtn = document.getElementById("Ethernet");
+        const wifiBtn = document.getElementById("WiFi");
+
+        const ethernetDiv = document.getElementsByClassName("ethernet")[0];
+        const wifiDiv = document.getElementsByClassName("wifi")[0];
+
+        ethernetBtn.addEventListener("click", function () {
+         ethernetDiv.style.display = "block";
+            wifiDiv.style.display = "none";
+     });
+
+    wifiBtn.addEventListener("click", function () {
+        wifiDiv.style.display = "block";
+        ethernetDiv.style.display = "none";
+    });
+    </script>
     </body>
 </html>
