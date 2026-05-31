@@ -29,6 +29,7 @@ code{
     background-color: rgb(40,40,80);
     padding: 1%;
     border-radius: 3px;
+    margin: 3px;
 }
 .Ethernet{
     display:none;
@@ -43,5 +44,5 @@ button{
     transition:ease 0.2s;
 }
 button :hover{
-    background-color: rgb(50,50,160);
+    background-color: rgb(90,50,160);
 }
