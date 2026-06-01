@@ -48,7 +48,7 @@ button{
 button :hover{
     background-color: rgb(90,50,160);
 }
-image{
+img{
     border-radius: 50px;
     height: 30%;
 }
