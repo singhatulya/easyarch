@@ -66,6 +66,11 @@
         document.getElementById("station").textContent = `station ${stationame.value} scan`;
         document.getElementById("get").textContent = `station ${stationame.value} get-networks`;
     })
+
+    const wifinamer = document.getElementById("wifiname");
+    wifinamer.addEventListener("input", function(){
+        document.getElementById("wificon").textContent = `station ${stationame.value} connect ${wifinamer.value}`;
+    })
     </script>
     </body>
 </html>
