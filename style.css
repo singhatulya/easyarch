@@ -50,8 +50,5 @@ button :hover{
 }
 image{
     border-radius: 50px;
-    size: 40%;
-}
-.hdd{
-    size: 30%;
+    height: 30%;
 }
