@@ -34,9 +34,9 @@
             <code id="station">station ?? scan</code>
             <p>Then</p>
             <code id="get">station ?? get-networks</code>
+            <p>Type your Wifi Name below</p>
             <form>
                 <input type="text" id="wifiname">
-                <button id="gener">Give Next Command</button>
             </form>
             <code id="wificon">station ?? connect ???</code>
             <p>After all these steps. Check Internet by running the following command.</p>
@@ -60,6 +60,12 @@
         wifiDiv.style.display = "block";
         ethernetDiv.style.display = "none";
     });
+    
+    const stationame = document.getElementById("devname");
+    stationame.addEventListener("input", function(){
+        document.getElementById("station").textContent = 'station ${stationame} scan';
+        document.getElementById("get").textContent = 'station ${stationame} get-networks';
+    })
     </script>
     </body>
 </html>
