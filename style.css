@@ -33,9 +33,11 @@ code{
 }
 .Ethernet{
     display:none;
+    transition: ease 0.2s;
 }
 .wifi{
     display:none;
+    transition: ease 0.2s;
 }
 button{
     font-family: Nunito;
@@ -45,4 +47,8 @@ button{
 }
 button :hover{
     background-color: rgb(90,50,160);
+}
+image{
+    border-radius: 4px;
+    font-size: 40%;
 }
