@@ -50,6 +50,10 @@ button :hover{
 }
 
 img{
-    border-radius: 10px;
+    border-radius: 5px;
     height: 40%;
+}
+ul{
+    font-size: 120%;
+    font-weight: bold;
 }
