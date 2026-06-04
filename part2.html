@@ -7,4 +7,28 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
+    <body>
+        <h1>Using cfdisk to Partition the Disks</h1>
+        <p>Follow the following steps for UEFI to finally load Base Arch Linux on your Partition</p>
+        <p>First Run to see all disks: </p>
+        <code>lsblk</code>
+        <p>Write your preferred disk name, add a p as a suffix IF using nvme drives. </p>
+        <form>
+            <input type = "text" id = "diskname">
+        </form>
+        <p>Run: </p>
+        <code id = "cfdisk">sudo cfdisk ??</code>
+        <p>Then Select <code>GPT</code> for your system.</p>
+        <p>Since this guide is for UEFI systems, first go to Select Free space and select [New] and create 512M Partition
+            and set Type as UEFI Filesystem. This will be used by your UEFI BIOS to load the Operating System.
+        </p>
+        <p>Select Remaining Space and set it as Linux Filesystem.</p>
+        <p>Then, Select Write and type in <code>yes</code>.</p>
+        <p>Run: </p>
+        <code id = "mkfat">mkfs.fat -F32 ??</code>
+        <p>Then run: </p>
+        <code id = "mkext">mkfs.ext4 ??</code>
+        <p>And with that You have successfully partitioned the system.<br>
+        Next is actually putting Arch onto the System.</p>
+    </body>
 </html>
