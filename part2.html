@@ -30,5 +30,13 @@
         <code id = "mkext">mkfs.ext4 ??</code>
         <p>And with that You have successfully partitioned the system.<br>
         Next is actually putting Arch onto the System.</p>
+        <p>Run: </p>
+        <code id = "mnt1">mount ?? /mnt</code>
+        <code>mkdir -p /mnt/boot/efi</code>
+        <code id = "mnt2">mount ?? /mnt/boot/efi</code>
+        <p>Now we can run the following commands: </p>
+        <code>pacstrap -K /mnt base linux linux-firmware</code>
+        <code>genfstab -U /mnt >> /mnt/etc/fstab</code>
+        <code>arch-chroot /mnt</code>
     </body>
 </html>
