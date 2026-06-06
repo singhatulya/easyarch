@@ -31,12 +31,27 @@
         <p>And with that You have successfully partitioned the system.<br>
         Next is actually putting Arch onto the System.</p>
         <p>Run: </p>
-        <code id = "mnt1">mount ?? /mnt</code>
+        <code id = "mnt1">mount ?? /mnt</code><br>
         <code>mkdir -p /mnt/boot/efi</code>
         <code id = "mnt2">mount ?? /mnt/boot/efi</code>
         <p>Now we can run the following commands: </p>
-        <code>pacstrap -K /mnt base linux linux-firmware</code>
-        <code>genfstab -U /mnt >> /mnt/etc/fstab</code>
+        <code>pacstrap -K /mnt base linux linux-firmware</code><br>
+        <code>genfstab -U /mnt >> /mnt/etc/fstab</code><br>
         <code>arch-chroot /mnt</code>
+        <p>With the last command, you are no longer in Live archiso, Now you are 
+            in your Operating System. But it doesn't have anything other than Base Arch.
+        </p>
+        <a href = "essen.html">Continue - Installing Essentials and selecting a Desktop Environment.</a>
     </body>
+    <script>
+        const diskname = document.getElementById("diskname");
+        diskname.addEventListener("input", function(){
+            document.getElementById("cfdisk").textContent = `sudo cfdisk ${diskname}`;
+            document.getElementById("mkfat").textContent = `mkfs.fat -F32 ${diskname}1`;
+            document.getElementById("mkext").textContent = `mkfs.ext4 ${diskname}2`;
+            document.getElementById("mnt1").textContent = `mount ${diskname}1 /mnt`;
+            document.getElementById("mnt2").textContent = `mount ${diskname}2 /mnt/boot/efi`;
+
+        })
+    </script>
 </html>
