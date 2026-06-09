@@ -12,5 +12,40 @@
         <p>Now we have chrooted into the system, and before doing anything, we should install 
             some very critical things.
         </p>
+        <h2>Install sudo.</h2>
+        <p>Install sudo for security of the system. Very important. Just run: </p>
+        <code>pacman -S sudo</code><br><br>
+        <code>useradd -m -G wheel -s /bin/bash user</code>
+        <p>Then we will put a password on it. Run: </p>
+        <code>passwd yourusername</code>
+        <p>Allow sudo to work on <i>wheel</i> group.</p>
+        <code>EDITOR=nano visudo</code>
+        <p>find and uncomment: </p>
+        <code>%wheel ALL=(ALL:ALL) ALL</code>
+        <h2>Set your Timezone</h2>
+        <p>Just run: </p>
+        <code>ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime</code>
+        <code>hwclock --systohc</code>
+        <p>You may want to replace Asia/Kolkata with your own Timezone</p>
+        <h2>Then go for hostname.</h2>
+        <p>Run: </p>
+        <code>echo archpc > /etc/hostname</code>
+        <h2>Installing the essentials.</h2>
+        <p>Now run, important for UEFI systems.: </p>
+        <code>pacman -S grub efibootmgr networkmanager</code>
+        <p>Then install CPU microcode. For intel: </p>
+        <code>pacman -S intel-ucode</code>
+        <p>For AMD: </p>
+        <code>pacman -S amd-ucode</code>
+        <h2>Enable Networking</h2>
+        <code>systemctl enable NetworkManager</code>
+        <h2>Install GRUB</h2>
+        <p>GRUB lets you choose the operating system and options before boot. Just Run: </p>
+        <code>grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB</code><br><br>
+        <code>grub-mkconfig -o /boot/grub/grub.cfg</code>
+        <h2>Reboot</h2>
+        <p>Just run: </p>
+        <code>exit && reboot</code>
+        <p>Remove your installation media. And boot from the Arch SSD.</p>
     </body>
 </html>
