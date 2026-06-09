@@ -1,10 +1,33 @@
 <html>
-        <head>
+    <head>
         <title>Partition</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        </head>
+    </head>
+    <body>
+        <h1>Installing KDE</h1>
+        <h2>Update the whole system</h2>
+        <code>pacman -Syu</code>
+        <h2>Install KDE, Applications and sddm</h2>
+        <p>Then we can install the Plasma DE , applications and sddm(a login manager)</p>
+        <code>pacman -S plasma kde-applications sddm</code>
+        <h2>Activating sddm</h2>
+        <code>systemctl enable sddm.service</code>
+        <h2>Installing Drivers</h2>
+        <p>For <span style = "color: rgb(100,140,255);">intel: </span></p>
+        <code>pacman -S mesa</code>
+        <p>For <span style = "color: rgb(255,140,140);">AMD:</span> </p>
+        <code>pacman -S mesa xf86-video-amdgpu</code>
+        <p>For <span style = "color: rgb(100,255,100);">Nvidia: </span></p>
+        <code>pacman -S nvidia nvidia-utils</code>
+        <p>Reboot:</p>
+        <code>exit && reboot</code>
+        <p>Once you boot in, You will see your sddm login prompt and this means that
+            your installation is officially..
+        </p>
+        <h2 style = "text-align: center;">Completed 🎉</h2>
+    </body>
 </html>
