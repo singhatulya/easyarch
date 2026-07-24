@@ -11,12 +11,18 @@
         <h1>Installing KDE</h1>
         <h2>Update the whole system</h2>
         <code>pacman -Syu</code>
+        
         <h2>Install KDE, Applications and sddm</h2>
+
         <p>Then we can install the Plasma DE , applications and sddm(a login manager)</p>
         <code>pacman -S plasma kde-applications sddm</code>
+
         <h2>Activating sddm</h2>
+
         <code>systemctl enable sddm.service</code>
+
         <h2>Installing Drivers</h2>
+
         <p>For <span style = "color: rgb(100,140,255);">intel: </span></p>
         <code>pacman -S mesa</code>
         <p>For <span style = "color: rgb(255,140,140);">AMD:</span> </p>

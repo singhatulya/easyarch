@@ -43,10 +43,11 @@ button{
     font-family: Nunito;
     background-color: rgb(40,40,120);
     color:white;
-    transition:ease 0.2s;
+    transition:all 0.2s ease;
+    border-color: none;
 }
 button :hover{
-    background-color: rgb(90,50,160);
+    background-color: rgb(200,50,160);
 }
 
 img{
